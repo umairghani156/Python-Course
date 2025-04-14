@@ -186,10 +186,37 @@ print(details.info())
 # print(p2.childDetails())
 
 
-myTuple = ["Banana","Orange","Apple"]
+# myTuple = ["Banana","Orange","Apple"]
 
-myItr = iter(myTuple)
+# myItr = iter(myTuple)
 
-print(next(myItr))
-print(next(myItr))
-print(next(myItr))
+# print(next(myItr))
+# print(next(myItr))
+# print(next(myItr))
+
+
+class Bags :
+    def __init__(self, name, price, color):
+        self.name = name
+        self.price = price
+        self.color = color
+
+    def bagDetails(self):
+        print(f'Hey, these are the details of the bag {self.name} {self.price} {self.color}')
+        
+
+p1 = Bags("Bag1", "1000", "Blue")
+
+print(p1.bagDetails())
+
+class Child(Bags):
+    def __init__(self, name, price, color, isSold: bool):
+        Bags.__init__(self, name, price, color)
+        self.isSold = isSold
+
+    def childDetails(self):
+        print(f'Hey everyOne looks here {self.name} {self.price} {self.color} {self.isSold}')
+
+p2 = Child("Bag2", "2000","Red", True)
+
+print(p2.childDetails())
