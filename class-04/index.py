@@ -195,28 +195,56 @@ print(details.info())
 # print(next(myItr))
 
 
-class Bags :
-    def __init__(self, name, price, color):
-        self.name = name
-        self.price = price
-        self.color = color
+# class Bags :
+#     def __init__(self, name, price, color):
+#         self.name = name
+#         self.price = price
+#         self.color = color
 
-    def bagDetails(self):
-        print(f'Hey, these are the details of the bag {self.name} {self.price} {self.color}')
+#     def bagDetails(self):
+#         print(f'Hey, these are the details of the bag {self.name} {self.price} {self.color}')
         
 
-p1 = Bags("Bag1", "1000", "Blue")
+# p1 = Bags("Bag1", "1000", "Blue")
 
-print(p1.bagDetails())
+# print(p1.bagDetails())
 
-class Child(Bags):
-    def __init__(self, name, price, color, isSold: bool):
-        Bags.__init__(self, name, price, color)
-        self.isSold = isSold
+# class Child(Bags):
+#     def __init__(self, name, price, color, isSold: bool):
+#         Bags.__init__(self, name, price, color)
+#         self.isSold = isSold
 
-    def childDetails(self):
-        print(f'Hey everyOne looks here {self.name} {self.price} {self.color} {self.isSold}')
+#     def childDetails(self):
+#         print(f'Hey everyOne looks here {self.name} {self.price} {self.color} {self.isSold}')
 
-p2 = Child("Bag2", "2000","Red", True)
+# p2 = Child("Bag2", "2000","Red", True)
 
-print(p2.childDetails())
+# print(p2.childDetails())
+
+from abc import ABC, abstractmethod
+
+class Shape(ABC):
+    @abstractmethod
+    def area(self):
+        pass
+
+class Rectangle(Shape):
+    def __init__(self, length, width):
+        self.length = length
+        self.width = width
+
+    def area(self):
+        return self.length * self.width
+
+class Circle(Shape):
+    def __init__(self, radius):
+        self.radius = radius
+
+    def area(self):
+        return 3.14 * self.radius
+
+rectangle = Rectangle(5, 3)
+circle = Circle(2)
+
+print(rectangle.area())
+print(circle.area())
