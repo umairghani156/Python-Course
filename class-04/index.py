@@ -221,30 +221,38 @@ print(details.info())
 
 # print(p2.childDetails())
 
-from abc import ABC, abstractmethod
+# from abc import ABC, abstractmethod
 
-class Shape(ABC):
-    @abstractmethod
-    def area(self):
-        pass
+# class Shape(ABC):
+#     @abstractmethod
+#     def area(self):
+#         pass
 
-class Rectangle(Shape):
-    def __init__(self, length, width):
-        self.length = length
-        self.width = width
+# class Rectangle(Shape):
+#     def __init__(self, length, width):
+#         self.length = length
+#         self.width = width
 
-    def area(self):
-        return self.length * self.width
+#     def area(self):
+#         return self.length * self.width
 
-class Circle(Shape):
-    def __init__(self, radius):
-        self.radius = radius
+# class Circle(Shape):
+#     def __init__(self, radius):
+#         self.radius = radius
 
-    def area(self):
-        return 3.14 * self.radius
+#     def area(self):
+#         return 3.14 * self.radius
 
-rectangle = Rectangle(5, 3)
-circle = Circle(2)
+# rectangle = Rectangle(5, 3)
+# circle = Circle(2)
 
-print(rectangle.area())
-print(circle.area())
+# print(rectangle.area())
+# print(circle.area())
+
+def factorial(n):
+    if n == 0:
+        return 1
+    else:
+        return n * factorial(n-1)
+
+print(factorial(5))
