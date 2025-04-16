@@ -249,6 +249,9 @@ print(details.info())
 # print(rectangle.area())
 # print(circle.area())
 
+def sum():
+    name = "Umair"
+
 def factorial(n):
     if n == 0:
         return 1
