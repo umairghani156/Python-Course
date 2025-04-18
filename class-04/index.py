@@ -259,3 +259,20 @@ def factorial(n):
         return n * factorial(n-1)
 
 print(factorial(5))
+
+
+class Animal:
+    def speak(self):
+        print("Animal speaks")
+
+class Dog(Animal):
+    def speak(self):  # This method overrides Animal's speak()
+        print("Dog barks")
+
+# Usage
+animal = Animal()
+animal.speak()  # Output: Animal speaks
+
+dog = Dog()
+dog.speak()     # Output: Dog barks
+
