@@ -276,3 +276,8 @@ animal.speak()  # Output: Animal speaks
 dog = Dog()
 dog.speak()     # Output: Dog barks
 
+
+name = "Umair"
+
+name = "faiz"
+
