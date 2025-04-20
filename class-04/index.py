@@ -281,3 +281,8 @@ name = "Umair"
 
 name = "faiz"
 
+
+def Person():
+    console.log("Hlelo")
+    
+
