@@ -1,4 +1,8 @@
-
+class Product:
+    quantity: 4
+    shirts: "blue"
+    
+    
 class Car:
     wheels = 4
     steering = 1
